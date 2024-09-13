@@ -1,0 +1,480 @@
+<html>
+    <head>
+        <title>Frontend</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <style>
+
+.top{
+                background-color: rgb(252, 156, 53);
+            }
+
+            .header{
+                background-color: darkblue;
+                color: white;
+                font-weight: bold;
+                display: grid;
+                grid-template-columns: 60% 40%;
+                margin-top: 4px;
+                padding: 10px;
+            }
+
+            .header_left a{
+                text-decoration: none;
+                color: white;
+                padding-right: 100px;
+                padding-left: 40px;
+            }
+
+            .header_left a:hover{
+                color: rgb(245, 0, 0);
+            }
+
+            .header_icon{
+                padding-left: 250px;
+                
+            }
+
+            .header_icon i{
+                padding-left: 30px;
+                color: white;
+            }
+
+            .graduation_cap{
+                position: absolute;
+                padding-top: 10px;
+                padding-left: 40px;
+            }
+
+            .navbar {
+                overflow: hidden;
+                background-color: rgb(160, 223, 244);
+                padding-left: 300px;
+            }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: rgb(10, 10, 10);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+            .dropdown .dropbtn {
+                font-size: 16px;  
+                border: none;
+                outline: none;
+                color: rgb(15, 15, 15);
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: rgb(247, 243, 243);
+                color: red;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                float: none;
+                color: rgb(4, 2, 5);
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color: rgb(10, 7, 7);
+                color: white;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .enquiry_btn{
+                background-color: rgb(45, 200, 133);
+                font-weight: bold;
+                color: white;
+                border: none;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: 80px;   
+                margin-top: 10px; 
+                border-radius: 5px;          
+            }
+
+            .form{
+                display: none;
+                position: absolute;
+                left: 850px;
+                background-color: white;
+                width: 25%;
+                border-radius: 4px;
+                margin-top: 11px;
+                box-shadow: 2px 2px 5px;
+            }
+
+            .form_radio{
+                background-color: skyblue;
+                padding: 10px;
+                font-weight: bolder;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+
+            .form_radio a{
+                padding-left: 30px;
+            }
+
+            .form h3{
+                color: rgb(0, 1, 1);
+                padding-top: 9px;
+                padding-bottom: 22px;
+            }
+            
+            .form input[type="text"],
+            input[type="email"],
+            select,option
+            {
+                margin-bottom: 25px;
+                padding: 8px;
+                padding-left: 10px;
+                padding-right: 20px;
+            }
+
+            .form select,option
+            {
+                padding-left: 10px;
+                padding-right: 60px;
+            }
+
+            .form button{
+                background-color: blue;
+                border: 1px solid black;
+                color: white;
+                border-radius: 3px;
+                padding: 8px;
+                padding-left: 50px;
+                padding-right: 50px;
+                margin-bottom: 8px;
+            }
+
+            .navbar:hover  .form{
+                display: block;
+            }
+
+            .heading_btn{
+                text-align: center;
+            }
+
+            .heading_btn button{
+                margin-left: 10px;
+            }
+
+            .form1{
+                width: 90%;
+                padding-top: 2px;
+                margin-top: 20px;
+                box-shadow: 2px 2px 5px;
+                margin-left: 55px;
+            }
+
+
+            .overflow-content{
+                overflow: scroll;
+                width: 90%;
+                height: 150px;
+                display: none;
+                margin-left: 55px;
+            }
+
+            .overflow_html:hover .overflow-content{
+               display: block;
+            }
+
+            .overflow_css:hover .overflow-content{
+               display: block;
+            }
+
+            .overflow_javascript:hover .overflow-content{
+               display: block;
+            }
+
+            .overflow_react:hover .overflow-content{
+               display: block;
+            }
+            
+
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="top">
+
+            <marquee behavior="alternate" direction="">
+                <p>Our best offer Ever!!! Summer Special - Get 3 Courses at 22499/-only <a href="">Read More</a></p>
+            </marquee>
+           
+        </div>
+
+        <div class="header">
+                <div class="header_left">
+                    <a>Email: rjtechnology@gmail.com</a>
+                    <a>Contact: +91 9595985858</a>
+                </div>
+                
+                <div class="header_icon">
+                   <a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook"></i></a>
+                   <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                   <a href="https://x.com/?lang=en-in"><i class="fa-brands fa-twitter"></i></a>
+                   <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+        </div>
+
+        <div class="graduation_cap">
+            <a style="font-size: 20px; color: rgb(21, 195, 154); text-decoration: none;"><i class="fa-solid fa-graduation-cap"></i> RJ Technology</a>
+        </div>
+
+
+        <div class="navbar">
+
+            <a href="Home.html">Home</a>
+            <a href="#">About</a>
+            <a href="">Online Training</a>
+            <a href="">Contact</a>
+            <div class="dropdown">
+              <button class="dropbtn">Courses</button>
+              <div class="dropdown-content">
+                <a href="frontend.html">Frontend</a>
+                <a href="#">Backend</a>
+              </div>
+            
+            </div> 
+            <button class="enquiry_btn">Enquiry</button>
+
+            <div class="form">
+            
+                <form>
+                    <center>
+                        <h3>Request for Class Room & Online Training Question</h3>
+                        <div class="form_radio">
+                            <i class="fa-solid fa-house"></i> Classroom
+                            <i class="fa-solid fa-laptop"></i> Online
+                        </div>
+                        <br>
+                        <input type="text" placeholder="Enter Your Name">
+                        <br>
+                        <input type="text" placeholder="Enter Your Email">
+                        <br>
+                        <input type="text" placeholder="Enter Your Mobile No">
+                        <br>
+                        <select name="" id="">
+                            <option value="">Select</option>
+                            <option value="">Python</option>
+                            <option value="">Java</option>
+                            <option value="">Bootstrap</option>
+                            <option value="">cloud computing</option>
+                            <option value="">Networking</option>
+                        </select>
+                        <br>
+                        <button>Submit Query</button>
+                    </center>
+                    
+                </form>
+            </div>
+
+        </div>
+
+
+        <div class="heading">
+            <center><h1 style="color: rgb(242, 188, 64);">Frontend</h1></center>
+
+            <div class="heading_btn">
+                <button style="background-color: rgb(242, 188, 64); color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border: none; padding: 10px; border-radius: 5px;"><i class="fa-solid fa-user-plus"></i> Enroll</button>
+                <button style="background-color: rgb(81, 5, 233); color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border: none; padding: 6px; border-radius: 5px;">React</button>
+                <button style="background-color: rgb(81, 5, 233); color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border: none; padding: 6px; border-radius: 5px;">Javascript</button>
+                <button style="background-color: rgb(242, 188, 64); color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border: none; padding: 10px; border-radius: 5px;"><i class="fa-solid fa-calendar-days"></i> View Batches</button>
+            </div>
+        </div><br>
+
+
+        <div class="container">
+
+            <form class="form1">
+                <center><h3 style="color: rgb(242, 188, 64);;">Who this course for?</h3></center>
+                <ul>
+                    <li>The course covers the basics of HTML (Hypertext Markup Language), which is essential for creating web pages. You’ll learn about HTML tags, attributes, and how to structure content.</li><br>
+                    <li>Explore various HTML elements such as headings, paragraphs, lists, links, and images. Learn how to use them effectively in your web content.</li><br>
+                    <li>You’ll learn how to create forms for user input, including text fields, checkboxes, radio buttons, and submit buttons. This knowledge is crucial for building interactive web applications.</li><br>
+                </ul>
+            </form>
+
+
+            <form class="form1">
+                <center><h3 style="color: rgb(242, 188, 64);;">Why take this course?</h3></center>
+                <ul>
+                    <li><strong>Career Opportunities:</strong> Proficiency in HTML is highly valued by employers. Whether you’re aiming for a front-end developer role or want to collaborate with designers and back-end developers, knowing HTML is a must</li><br>
+                    <li><strong>Preparation for Advanced Topics:</strong> Once you grasp HTML, you can dive into CSS (Cascading Style Sheets) for styling and JavaScript for interactivity. </li><br>
+                    <li>You’ll learn how to create forms for user input, including text fields, checkboxes, radio buttons, and submit buttons. This knowledge is crucial for building interactive web applications.</li><br>
+                </ul>
+            </form>
+
+
+            <form class="form1">
+                <center><h3 style="color: rgb(242, 188, 64);;">What will you learn?</h3></center>
+                <ul>
+                    <li><strong>Career Opportunities:</strong> Proficiency in HTML is highly valued by employers. Whether you’re aiming for a front-end developer role or want to collaborate with designers and back-end developers, knowing HTML is a must</li><br>
+                    <li><strong>Preparation for Advanced Topics:</strong> Once you grasp HTML, you can dive into CSS (Cascading Style Sheets) for styling and JavaScript for interactivity. </li><br>
+                    <li>You’ll learn how to create forms for user input, including text fields, checkboxes, radio buttons, and submit buttons. This knowledge is crucial for building interactive web applications.</li><br>
+                </ul>
+            </form>
+
+           <br>
+
+           <div class="overflow_html">
+            <div>
+                
+                <button class="button" style="width: 90%; 
+                text-align: left; 
+                padding: 5px; 
+                background-color: rgb(242, 188, 64); 
+                border: none; 
+                color: #f9f9f9;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: bold;
+                padding-left: 20px;
+                margin-left: 55px;
+                box-shadow: 2px 2px 5px;
+                ">HTML</button>
+
+            </div>
+
+            <div class="overflow-content">
+
+                <ul>
+                    <li>The course covers the basics of HTML (Hypertext Markup Language), which is essential for creating web pages. You’ll learn about HTML tags, attributes, and how to structure content.</li><br>
+                    <li>Explore various HTML elements such as headings, paragraphs, lists, links, and images. Learn how to use them effectively in your web content.</li><br>
+                    <li>You’ll learn how to create forms for user input, including text fields, checkboxes, radio buttons, and submit buttons. This knowledge is crucial for building interactive web applications.</li><br>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="overflow_css" style="padding-top: 8px;">
+                <div>
+                    
+                    <button class="button" style="width: 90%; 
+                    text-align: left; 
+                    padding: 5px; 
+                    background-color: rgb(242, 188, 64); 
+                    border: none; 
+                    color: #f9f9f9;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-weight: bold;
+                    padding-left: 20px;
+                    margin-left: 55px; 
+                    box-shadow: 2px 2px 5px;">CSS</button>
+
+                </div>
+
+                <div class="overflow-content" >
+
+                    <ul>
+                        <li>The course covers the basics of HTML (Hypertext Markup Language), which is essential for creating web pages. You’ll learn about HTML tags, attributes, and how to structure content.</li><br>
+                        <li>Explore various HTML elements such as headings, paragraphs, lists, links, and images. Learn how to use them effectively in your web content.</li><br>
+                        <li>You’ll learn how to create forms for user input, including text fields, checkboxes, radio buttons, and submit buttons. This knowledge is crucial for building interactive web applications.</li><br>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="overflow_javascript" style="padding-top: 8px;">
+                <div>
+                    
+                    <button class="button" style="width: 90%; 
+                    text-align: left; 
+                    padding: 5px; 
+                    background-color: rgb(242, 188, 64); 
+                    border: none; 
+                    color: #f9f9f9;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-weight: bold;
+                    padding-left: 20px;
+                    margin-left: 55px; 
+                    box-shadow: 2px 2px 5px;">Javascript</button>
+
+                </div>
+
+                <div class="overflow-content">
+
+                    <ul>
+                        <li>The course covers the basics of HTML (Hypertext Markup Language), which is essential for creating web pages. You’ll learn about HTML tags, attributes, and how to structure content.</li><br>
+                        <li>Explore various HTML elements such as headings, paragraphs, lists, links, and images. Learn how to use them effectively in your web content.</li><br>
+                        <li>You’ll learn how to create forms for user input, including text fields, checkboxes, radio buttons, and submit buttons. This knowledge is crucial for building interactive web applications.</li><br>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="overflow_react" style="padding-top: 8px;">
+                <div>
+                    
+                    <button class="button" style="width: 90%; 
+                    text-align: left; 
+                    padding: 5px; 
+                    background-color: rgb(242, 188, 64); 
+                    border: none; 
+                    color: #f9f9f9;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-weight: bold;
+                    padding-left: 20px;
+                    margin-left: 55px; 
+                    box-shadow: 2px 2px 5px;">React JS</button>
+
+                </div>
+
+                <div class="overflow-content">
+
+                    <ul>
+                        <li>The course covers the basics of HTML (Hypertext Markup Language), which is essential for creating web pages. You’ll learn about HTML tags, attributes, and how to structure content.</li><br>
+                        <li>Explore various HTML elements such as headings, paragraphs, lists, links, and images. Learn how to use them effectively in your web content.</li><br>
+                        <li>You’ll learn how to create forms for user input, including text fields, checkboxes, radio buttons, and submit buttons. This knowledge is crucial for building interactive web applications.</li><br>
+                    </ul>
+
+            </div>
+
+        </div>
+
+           
+
+        </div>
+
+    </body>
+</html>

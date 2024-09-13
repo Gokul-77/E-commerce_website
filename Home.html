@@ -1,0 +1,636 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="card.css">
+        <link rel="stylesheet" href="formcard.css">
+                
+        <style>
+            .top{
+                background-color: rgb(252, 156, 53);
+            }
+
+            .header{
+                background-color: darkblue;
+                color: white;
+                font-weight: bold;
+                display: grid;
+                grid-template-columns: 60% 40%;
+                margin-top: 4px;
+                padding: 10px;
+            }
+
+            .header_left a{
+                text-decoration: none;
+                color: white;
+                padding-right: 100px;
+                padding-left: 40px;
+            }
+
+            .header_left a:hover{
+                color: rgb(245, 0, 0);
+            }
+
+            .header_icon{
+                padding-left: 250px;
+                
+            }
+
+            .header_icon i{
+                padding-left: 30px;
+                color: white;
+            }
+
+            .graduation_cap{
+                position: absolute;
+                padding-top: 10px;
+                padding-left: 40px;
+            }
+
+            .navbar {
+                overflow: hidden;
+                background-color: rgb(160, 223, 244);
+                padding-left: 300px;
+            }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: rgb(10, 10, 10);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+            .dropdown .dropbtn {
+                font-size: 16px;  
+                border: none;
+                outline: none;
+                color: rgb(15, 15, 15);
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: rgb(247, 243, 243);
+                color: red;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+               
+            }
+
+            .dropdown-content a {
+                float: none;
+                color: rgb(4, 2, 5);
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color: rgb(10, 7, 7);
+                color: white;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .enquiry_btn{
+                background-color: rgb(45, 200, 133);
+                font-weight: bold;
+                color: white;
+                border: none;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: 80px;   
+                margin-top: 10px; 
+                border-radius: 5px;          
+            }
+
+
+            /* styles for hover of enquiry btn form */
+
+            .form{
+                display: none;
+                position: absolute;
+                left: 850px;
+                background-color: white;
+                width: 25%;
+                border-radius: 4px;
+                margin-top: 11px;
+            }
+
+            .form_radio{
+                background-color: skyblue;
+                padding: 10px;
+                font-weight: bolder;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+
+            .form_radio a{
+                padding-left: 30px;
+            }
+
+            .form h3{
+                color: rgb(0, 1, 1);
+                padding-top: 9px;
+                padding-bottom: 22px;
+            }
+            
+            .form input[type="text"],
+            input[type="email"],
+            select,option
+            {
+                margin-bottom: 25px;
+                padding: 8px;
+                padding-left: 10px;
+                padding-right: 20px;
+            }
+
+            .form select,option
+            {
+                padding-left: 10px;
+                padding-right: 60px;
+            }
+
+            .form button{
+                background-color: blue;
+                border: 1px solid black;
+                color: white;
+                border-radius: 3px;
+                padding: 8px;
+                padding-left: 50px;
+                padding-right: 50px;
+                margin-bottom: 8px;
+            }
+
+            .enquiry:hover  .form{
+                display: block;
+            }
+
+            /* form when hover with apply form btn */
+            
+            .apply_form{
+                display: none;
+                position: absolute;
+                bottom: 10px;
+                left: 300px;
+                background-color: white;
+                padding-left: 50px;
+                padding-right: 50px;
+                border-radius: 10px;
+            }
+
+            .apply_form input[type="text"],input[type="textarea"]{
+                border: none;
+                border-bottom: 1px solid red;
+                margin-bottom: 20px;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 20px;
+
+            }
+            
+           /*  .apply_form button{
+                padding-right: 25px; 
+                margin-right: 10px;
+                margin-left: 10px;
+                color: white; 
+                background-color: blue;
+                border: none;
+            }
+ */
+
+            /* body part of the content */
+
+            .content{
+                width: 100%;
+                height: 550px;
+                margin-top: 0%;
+                animation: body 18s infinite;
+                background-size: cover;
+            }
+
+            @keyframes body{
+                20%{
+                    background-image: url("content_img1.jpg");
+                }
+                40%{
+                    background-image: url("content_img2.jpg");
+                }
+                60%{
+                    background-image: url("content_img3.jpg");
+                }
+                80%{
+                    background-image: url("content_img4.jpg");
+                }
+                100%{
+                    background-image: url("content_img5.jpg");
+                }
+            }
+
+            .content_text{
+                color: white;
+                padding-top: 35px;
+                margin-left: 140px;
+                margin-right: 350px;
+            }
+
+            .content_text button{
+                background-color: rgb(21, 195, 154);
+                font-weight: bold;
+                color: white;
+                border: none;
+                padding: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 5px;
+               
+            }
+
+            .content_text button:hover{
+                background-color: rgb(2, 10, 8);
+            }
+
+            .apply_online_btn:hover .apply_form{
+                display: block;
+            }
+
+
+            /* footer part */
+
+            footer{
+                display: grid;
+                grid-template-columns: 25% 25% 20% 30%;
+                gap: 10px;
+                background-color: aquamarine;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+
+
+            .footer_icon a{
+                font-size: 20;
+                padding: 10px;
+                border-radius: 5px;
+                margin-right: 5px;
+                background-color: rgb(32, 241, 91);
+            }
+
+            footer input{
+                margin-left: 0%;
+                position: relative;
+                
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="top">
+
+            <marquee behavior="alternate" direction="">
+                <p>Our best offer Ever!!! Summer Special - Get 3 Courses at 22,499/-only <a href="">Read More</a></p>
+            </marquee>
+           
+        </div>
+
+        <div class="header">
+                <div class="header_left">
+                    <a>Email: rjtechnology@gmail.com</a>
+                    <a>Contact: +91 9595985858</a>
+                </div>
+                
+                <div class="header_icon">
+                   <a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook"></i></a>
+                   <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                   <a href="https://x.com/?lang=en-in"><i class="fa-brands fa-twitter"></i></a>
+                   <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+        </div>
+
+        <div class="graduation_cap">
+            <a style="font-size: 20px; color: rgb(21, 195, 154); text-decoration: none;"><i class="fa-solid fa-graduation-cap"></i> RJ Technology</a>
+        </div>
+
+
+        <!-- Navigation_Bar -->
+
+        <div class="navbar">  
+            <a href="Home.html">Home</a>
+            <a href="#">About</a>
+            <a href="">Online Training</a>
+            <a href="">Contact</a>
+            <div class="dropdown">
+              <button class="dropbtn">Courses</button>
+              <div class="dropdown-content">
+                <a href="frontend.html">Frontend</a>
+                <a href="#">Backend</a>
+              </div>
+            
+            </div> 
+           
+              <!-- form when click the equiry btn   -->
+
+            <div class="enquiry">
+
+                <div>
+                    <button class="enquiry_btn">Enquiry</button>
+                </div>
+                
+                <div class="form">
+                
+                    <form>
+                        <center>
+                            <h3>Request for Class Room & Online Training Question</h3>
+                            <div class="form_radio">
+                                <i class="fa-solid fa-house"></i> Classroom
+                                <i class="fa-solid fa-laptop"></i> Online
+                            </div>
+                            <br>
+                            <input type="text" placeholder="Enter Your Name">
+                            <br>
+                            <input type="text" placeholder="Enter Your Email">
+                            <br>
+                            <input type="text" placeholder="Enter Your Mobile No">
+                            <br>
+                            <select name="" id="">
+                                <option value="">Select</option>
+                                <option value="">Python</option>
+                                <option value="">Java</option>
+                                <option value="">Bootstrap</option>
+                                <option value="">cloud computing</option>
+                                <option value="">Networking</option>
+                            </select>
+                            <br>
+                            <button>Submit Query</button>
+                        </center>
+                        
+                    </form>
+                </div>
+            </div>
+          </div>   
+
+
+        <!-- body part of the content -->
+
+        <div class="content">
+            <div class="content_text">
+                <p style="font-weight: bolder; font-size: 40px;">RJ Technologies</p>
+                <h4>Best Online & Classroom Training Institute</h4><br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea delectus voluptas consequatur doloribus aspernatur necessitatibus libero officia deserunt voluptates ullam numquam quidem rerum exercitationem laboriosam magnam magni illo, eos quas?
+                Eveniet inventore non libero harum quisquam, pariatur velit voluptates, totam adipisci asperiores voluptatibus? Accusantium eius aliquid accusamus nobis quod, excepturi, in soluta omnis laboriosam amet aperiam totam provident expedita est.
+                Porro voluptates suscipit harum aliquam ab? Accusamus aliquid natus aperiam maxime, impedit nulla libero ducimus facere perspiciatis et maiores amet dolorum repudiandae! Pariatur omnis suscipit quod nam exercitationem aspernatur similique.</p>
+                <br>
+                
+                <div class="apply_online_btn">
+                    <div>
+                        <button>Apply Online</button>
+                    </div>
+                    
+    
+                    <div class="apply_form">
+                        <form>
+                            <center>
+                                <h3>Quick Enquiry</h3>
+                                <input type="text" placeholder="Name*"><br>
+                                <input type="text" placeholder="Mobile*"><br>
+                                <input type="text" placeholder="Email*"><br>
+                                <input type="textarea">
+                                <br>
+                                <button style="padding-right: 25px; 
+                                margin-right: 10px;
+                                margin-left: 10px;
+                                color: white; 
+                                background-color: blue;
+                                border: none;"> I'm Interested tell me more</button>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+        
+            </div>
+           
+        </div><br><br>
+
+
+        <div>
+            <center>
+                <h2>Key Features</h2>
+                <p style="margin-left: 40px; margin-right: 40px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rem ratione eveniet sequi architecto quasi placeat consequuntur magni nihil reprehenderit cupiditate quae, omnis fugit vel tempora mollitia, suscipit illo nemo.</p>
+
+            </center>
+        </div><br><br>
+
+
+        <!-- cards for ad -->
+
+        <div class="container">
+            <div class="card">
+              <div class="card-icon">
+                <i class="fas fa-user-graduate"></i> 
+              </div>
+              <div class="card-title">Expert Faculty</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, impedit?</p>
+            </div>
+          
+            <div class="card">
+              <div class="card-icon">
+                <i class="fas fa-flask"></i> 
+              </div>
+              <div class="card-title">Well Equipped Labs</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, impedit?</p>
+            </div>
+          
+            <div class="card">
+              <div class="card-icon">
+                <i class="fas fa-graduation-cap" ></i> 
+              </div>
+              <div class="card-title">Quality Education</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, impedit?</p>
+            </div>
+          
+            <div class="card">
+              <div class="card-icon">
+                <i class="fas fa-clock"></i> 
+              </div>
+              <div class="card-title">24*7 Access</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, impedit?</p>
+            </div>
+          </div>
+
+
+          <div>
+            <center>
+                <h2>Our Courses</h2>
+                <p style="margin-left: 40px; margin-right: 40px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rem ratione eveniet sequi architecto quasi placeat consequuntur magni nihil reprehenderit cupiditate quae, omnis fugit vel tempora mollitia, suscipit illo nemo.</p>
+
+            </center>
+        </div><br><br>
+
+
+
+        <!-- cards for courses -->
+
+        <div class="form_cards">
+            <div>
+              <form action="">
+                <h3>Full stack Development</h3>
+                <p>cras ultricies lacus consectetur, consectetur</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae minus animi eius nam </p>
+                <button><a href="form_apply_online.html" style="text-decoration: none; color: white;">Apply online</a></button>
+              </form>
+            </div>
+      
+            <div>
+              <form action="">
+                <h3>Front End Development</h3>
+                <p>cras ultricies lacus consectetur, consectetur</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae minus animi eius nam </p>
+                <button>Apply online</button>
+              </form>
+            </div>
+      
+            <div>
+              <form action="">
+                <h3>Back End Development</h3>
+                <p>cras ultricies lacus consectetur, consectetur</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae minus animi eius nam </p>
+                <button>Apply online</button>
+              </form>
+            </div>
+      
+            <div>
+              <form action="">
+                <h3>Data Science</h3>
+                <p>cras ultricies lacus consectetur, consectetur</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae minus animi eius nam </p>
+                <button>Apply online</button>
+              </form>
+            </div>
+      
+            <div>
+              <form action="">
+                <h3>AWS</h3>
+                <p>cras ultricies lacus consectetur, consectetur</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae minus animi eius nam </p>
+                <button>Apply online</button>
+              </form>
+            </div>
+      
+            <div>
+              <form action="">
+                <h3>Devops</h3>
+                <p>cras ultricies lacus consectetur, consectetur</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae minus animi eius nam </p>
+                <button>Apply online</button>
+              </form>
+            </div>
+          </div><br><br>
+
+
+          <footer>
+            <div>
+                <form action="">
+                    <h3 style="text-align: left; padding-left: 35px;"><i class="fa-solid fa-graduation-cap"></i>  RJ Technologies</h3>
+                    <p style="text-align: left; padding-left: 35px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, tempore ipsam nihil, ducimus cupiditate fuga numquam quaerat quos.
+                    Sit non aut est, error, laboriosam hic rerum nemo ex iste nihil atque!!</p>
+                </form>
+            </div>
+
+            <div>
+                <form action="">
+                    <h3 style="text-align: left; padding-left: 70px;">Our Services</h3>
+                    <div style="text-align: left; margin-left: 30px;">
+                    <ul>Mobile Application Design</ul>
+                    <ul>Web Application Design</ul>
+                    <ul>Websites Design</ul>
+                    <ul>Web User Interface Design</ul>
+                    <ul>Web UX Design and Research</ul>
+                    <ul>Theme Development Design</ul>
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <form action="">
+
+                    <h3 style="text-align: left; padding-left: 63px;">Head Office</h3>
+                    <address style="text-align: left; margin-left: 60px;">
+                        1/2, Marathahalli, Bengaluru <br>
+                        Karnataka-560037, <br>
+                        Phone: +91 9879780769 <br>
+                        Email: rjtechnology@gmail.com <br>
+                    </address>
+                    <p style="text-align: left; margin-left: 60px;"><strong>Office Time:</strong>10AM - 6PM</p>
+
+                </form>
+            </div>
+
+            <div>
+                <form action="">
+
+                    <h3 style=" text-align: left; padding-left: 80px;">Subscribe us</h3>
+                    <input type="email" placeholder="example@gmail.com"><i class="fa-solid fa-paper-plane" style="margin-left: 5px;font-size: 22;
+                    padding: 8px;
+                    border-radius: 5px;
+                    background-color: rgb(32, 241, 91);"></i>
+
+                    <div class="footer_icon">
+                        <a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/?lang=en-in"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                     </div>
+
+                </form>
+            </div>
+          </footer>
+          
+    </body>
+</html>

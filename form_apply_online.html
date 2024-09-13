@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>Document</title>
+
+        <style>
+            form{
+                display: grid;
+                grid-template-columns: 40% 60%;
+            }
+
+            .left_block{
+                background-image: linear-gradient(to right, rgb(150, 150, 234), pink);
+                color: white;
+                padding-left: 25%;
+                padding-top: 35%;
+            }
+
+            .right_block{
+                margin-left: 50px;
+            }
+
+            .right_block input
+            {
+                margin-top: 10px;
+                margin-right: 10px;
+                padding: 8px;
+                
+            }
+
+            label{
+                display: inline-block;
+                font-size: 18;
+            }
+
+            .form_input{
+                display: grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+            }
+
+            .form_input1{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                margin-top: 15px;
+            }
+
+            .form_password{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                margin-top: 15px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"],
+            input[type="password"]            
+            {
+                padding-right: 25px;
+                margin-top: 4px;
+                border: none;
+                box-shadow: 2px 2px 3px;
+            }
+
+            button:hover{
+                background-color: purple;
+                color: white;
+            }
+
+            textarea{
+                background-color: rgb(185, 185, 244);
+                box-shadow: 2px 2px 3px;
+                margin-top: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <form action="">
+                <div class="left_block">
+                    <p style="font-size: 40; margin-bottom: 0%; padding-left: 1px;"><strong>RJ <br></strong></p>Technology
+                    
+                        <p style="text-align: center; padding-right: 200px; padding-left: 0%;">To connect with us please enter the details</p>
+                    
+                </div>
+
+                <div class="right_block">
+
+                    <h2 style="font-size: 28;">Create an account</h2>
+                    <br>
+
+                    <div class="form_input">
+                        <div>
+                            <label for="">First Name</label><br>
+                            <input type="text" placeholder="First Name" required>
+                        </div>
+
+                        <div>
+                            <label for="">Last Name</label><br>
+                            <input type="text" placeholder="Last Name" required>
+                        </div>
+
+                        <div>
+                            <label for="">Age</label><br>
+                            <input type="number" ><br><br>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form_input1">
+                        <div>
+                            <label for="">Mobile Number</label><br>
+                            <input type="text" placeholder="Mobile Number" size="37">
+                        </div>
+
+                        <div>
+                            <label for="">Email</label><br>
+                            <input type="email" placeholder="example@gmail.com" required size="38"><br><br><br>
+                        </div>
+                    </div>
+
+
+                    <label for="">Description</label><br>
+                    <textarea rows="8" cols="90"></textarea><br><br>
+
+                    <div class="form_password">
+                        <div>
+                            <label for="">Password</label><br>
+                            <input type="password" required placeholder="Password" size="37">
+                        </div>
+
+                        <div>
+                            <label for="">Confirm Password</label><br>
+                            <input type="password" required placeholder="Confirm Password" size="38">
+                        </div>
+                    </div>
+                    
+
+                    
+                    <br><br><br>
+
+                    <button style="margin-left: 240px; padding: 4px; padding-left: 15px; padding-right: 15px; border-radius: 10px; border: 1px solid rgb(250, 47, 213);">Reset</button> 
+                    <button style="margin-left: 40px; padding: 4px; padding-left: 15px; padding-right: 15px; border-radius: 10px; border: 1px solid rgb(250, 47, 213);">Submit</button>
+
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
